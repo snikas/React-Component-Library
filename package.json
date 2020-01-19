@@ -4,7 +4,7 @@
   "description": "React Component Library (React, MUI, babel, typescript, storybook)",
   "main": "index.js",
   "scripts": {
-    "develop": "babel src --out-dir public/ --watch --extensions '.tsx'",
+    "dev": "babel src --out-dir public/ --watch --extensions '.tsx'",
     "prepare": "snowpack",
     "cleanStart": "rm -rf node_modules && rm -rf web_modules && npm i && npm run dev",
     "storybook": "start-storybook -p 6006",
