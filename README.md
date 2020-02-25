@@ -6,11 +6,11 @@
    <strong>Snowpack</strong><br/> Build web applications with less tooling and 10x faster iteration. No bundler required.
 </p>
 
-This is a sample Typescript React component library application which uses snowpack to view your local changes almost instantly. 
+This is a sample Typescript React component library application which uses snowpack to support previewing your local changes almost instantly. 
 
 Includes support for React, Typescript, Babel, Material-UI and storybook.
 
-This application also includes Rollup for your final production bundle.
+Rollup has been included to create your final production bundle.
 
 first run:
 
