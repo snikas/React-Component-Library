@@ -1,26 +1,56 @@
 {
-  "name": "snow",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "react-components",
+  "version": "0.0.1",
+  "description": "React Component Library (React, MUI, babel, typescript, storybook)",
+  "main": "dist/revel-ui.cjs.js",
+  "module": "dist/revel-ui.esm.js",
   "scripts": {
-    "dev": "npm run compile & servor . index.html 8080 --reload --browse",
-    "compile": "babel src --out-dir public/ --watch --presets @babel/preset-react --plugins @babel/plugin-syntax-dynamic-import",
+    "dev": "concurrently --kill-others 'npm run compile' 'npm run storybook'",
+    "compile": "babel src --out-dir public/ --watch --extensions '.tsx'",
     "prepare": "snowpack",
-    "cleanStart": "rm -rf node_modules && rm -rf web_modules && npm i && npm run dev"
+    "cleanstart": "rm -rf node_modules && rm -rf web_modules && npm i && npm run dev",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "check-types": "tsc",
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "snowpack"
+  ],
+  "author": "Steven Akins",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.8.3",
-    "react": "npm:@reactesm/react@^0.1.0",
-    "react-dom": "npm:@reactesm/react-dom@^0.1.1"
+    "react": "npm:@pika/react@^16.12.2",
+    "react-dom": "npm:@pika/react-dom@^16.12.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/preset-react": "^7.6.3",
-    "servor": "^3.0.8",
-    "snowpack": "^1.0.5"
-  }
+    "@babel/preset-typescript": "^7.8.3",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@storybook/addon-actions": "^5.3.6",
+    "@storybook/addon-links": "^5.3.6",
+    "@storybook/addons": "^5.3.6",
+    "@storybook/react": "^5.3.6",
+    "@types/react": "^16.9.17",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^5.1.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "snowpack": "^1.0.5",
+    "typescript": "^3.7.5"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ]
 }
