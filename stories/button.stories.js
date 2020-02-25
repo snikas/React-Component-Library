@@ -6,4 +6,4 @@ export default {
   component: Button,
 };
 
-export const ButtonDemo = () => <Button />;
+export const ButtonDemo = () => <Button label="Hurry Up!"/>;

@@ -51,6 +51,7 @@
     "snowpack": "^1.0.5",
     "typescript": "^3.7.5"
   },
+  "types": "dist/index.d.ts",
   "browserslist": [
     "defaults",
     "not IE 11",
