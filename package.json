@@ -1,5 +1,5 @@
 {
-  "name": "revel-ui-snowpack",
+  "name": "react-components",
   "version": "0.0.1",
   "description": "React Component Library (React, MUI, babel, typescript, storybook)",
   "main": "dist/revel-ui.cjs.js",
@@ -8,11 +8,12 @@
     "dev": "concurrently --kill-others 'npm run compile' 'npm run storybook'",
     "compile": "babel src --out-dir public/ --watch --extensions '.tsx'",
     "prepare": "snowpack",
-    "cleanStart": "rm -rf node_modules && rm -rf web_modules && npm i && npm run dev",
+    "cleanstart": "rm -rf node_modules && rm -rf web_modules && npm i && npm run dev",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "check-types": "tsc",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w"
   },
   "keywords": [
     "snowpack"
@@ -21,8 +22,8 @@
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.8.3",
-    "react": "npm:@reactesm/react@^0.1.0",
-    "react-dom": "npm:@reactesm/react-dom@^0.1.1"
+    "react": "npm:@pika/react@^16.12.2",
+    "react-dom": "npm:@pika/react-dom@^16.12.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",

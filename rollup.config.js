@@ -15,8 +15,8 @@ export default [
                     'prop-types': ["elementType"]
                 }
             }),
-            resolve(),
-            terser()
+			resolve(),
+			terser()
 		],
 		output: [
 			{ file: pkg.main, format: 'cjs', sourcemap: true },

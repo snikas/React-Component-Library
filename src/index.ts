@@ -1,5 +1,7 @@
-import Progress from './Progress';
+import CircularProgress from './CircularProgress';
+import Button from './Button';
 
 export {
-  Progress
+  CircularProgress,
+  Button
 }
