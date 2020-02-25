@@ -8,6 +8,7 @@ export default [
 	{
 		input: 'src/index.ts',
 		plugins: [
+			resolve(),
 			typescript(),
 			commonjs({
                 namedExports: {
@@ -15,7 +16,6 @@ export default [
                     'prop-types': ["elementType"]
                 }
             }),
-			resolve(),
 			terser()
 		],
 		output: [

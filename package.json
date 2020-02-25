@@ -6,14 +6,15 @@
   "module": "dist/revel-ui.esm.js",
   "scripts": {
     "dev": "concurrently --kill-others 'npm run compile' 'npm run storybook'",
-    "compile": "babel src --out-dir public/ --watch --extensions '.tsx'",
+    "compile": "babel src --out-dir public/ --watch --extensions .ts,.tsx",
     "prepare": "snowpack",
     "cleanstart": "rm -rf node_modules && rm -rf web_modules && npm i && npm run dev",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "check-types": "tsc",
     "build": "rollup -c",
-    "build:watch": "rollup -c -w"
+    "build:watch": "rollup -c -w",
+    "lint": "eslint --ext .tsx,.ts"
   },
   "keywords": [
     "snowpack"
@@ -39,8 +40,11 @@
     "@storybook/addons": "^5.3.6",
     "@storybook/react": "^5.3.6",
     "@types/react": "^16.9.17",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
     "babel-loader": "^8.0.6",
     "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
     "rollup": "^1.31.1",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.26.0",
